@@ -1,0 +1,207 @@
+/* ==========================================================================
+   LAYER 3: CUTE CARTOON CORAL LAGOON SHOWCASE (BRIGHT & CHEERFUL)
+   ========================================================================== */
+
+#layer-sea {
+  position: relative;
+  background: linear-gradient(180deg, 
+    #00C2D1 0%, 
+    #6ED4F8 35%, 
+    #BAE6FD 70%, 
+    #FFF3D6 100%);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bright Sunny Underwater Caustics */
+.underwater-caustics {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.45) 0%, transparent 60%),
+                    radial-gradient(circle at 20% 80%, rgba(255, 209, 102, 0.35) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(255, 107, 139, 0.25) 0%, transparent 50%);
+  opacity: 0.85;
+  pointer-events: none;
+  filter: blur(18px);
+  animation: causticFloat 10s ease-in-out infinite alternate;
+}
+
+@keyframes causticFloat {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.08) translateY(-15px); }
+}
+
+/* Cute Floating Bubbles */
+.underwater-bubbles-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.rising-bubble {
+  position: absolute;
+  bottom: -40px;
+  background: radial-gradient(circle at 35% 35%, #FFFFFF 0%, rgba(0, 194, 209, 0.4) 60%, transparent 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 194, 209, 0.25);
+  animation: bubbleRise linear infinite;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(15px) scale(1);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(-15px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Showcase Container */
+.sea-showcase-container {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 24px;
+}
+
+.showcase-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.mint-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: var(--radius-full);
+  background: #FFFFFF;
+  border: 3px solid #FFD166;
+  font-family: var(--font-cute);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #B45309;
+  box-shadow: 0 6px 16px rgba(255, 209, 102, 0.35);
+}
+
+.showcase-title {
+  font-family: var(--font-cute);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  color: #0E3854;
+  text-shadow: 0 3px 0 #FFFFFF;
+}
+
+.showcase-desc {
+  color: #1E4E70;
+  font-size: 1.05rem;
+  font-weight: 600;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Cute Bubbly Sea Actions Card */
+.sea-actions-card {
+  width: 100%;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  background: #FFFFFF;
+  border: 3.5px solid #BAE6FD;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(14, 56, 84, 0.12);
+  color: #0E3854;
+}
+
+.main-action-buttons-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-download-hd {
+  background: linear-gradient(135deg, #00C2D1 0%, #00838F 100%);
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-full);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 8px 0 #005662, 0 12px 25px rgba(0, 194, 209, 0.35);
+}
+
+.btn-share-x {
+  background: linear-gradient(135deg, #FF6B8B 0%, #FF5964 100%);
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-full);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 8px 0 #D93B57, 0 12px 25px rgba(255, 107, 139, 0.35);
+}
+
+.btn-copy-clip {
+  background: linear-gradient(135deg, #FFD166 0%, #FFB703 100%);
+  color: #0E3854;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-full);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 8px 0 #D97706, 0 12px 25px rgba(255, 209, 102, 0.35);
+}
+
+.secondary-actions-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.btn-back-beach,
+.btn-back-sky {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  background: #F0F9FF;
+  border: 2px solid #BAE6FD;
+  color: #0E3854;
+  font-family: var(--font-cute);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-back-beach:hover,
+.btn-back-sky:hover {
+  background: #FFD166;
+  border-color: #FFD166;
+  transform: translateY(-2px);
+}

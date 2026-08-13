@@ -1,0 +1,136 @@
+/* ==========================================================================
+   3D HOLOGRAPHIC TILT & FOIL EFFECTS — CUTE PASTEL EDITION
+   ========================================================================== */
+
+.holo-card-scene {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.holo-card-stage {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 600 / 830;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  border-radius: 32px;
+  will-change: transform;
+  background: transparent;
+}
+
+.holo-card-stage.pfp-mode {
+  aspect-ratio: 1 / 1;
+  max-width: 360px;
+}
+
+/* Cute Lanyard Clip Top Motif for ID Card */
+.holo-lanyard-clip {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(30px);
+  width: 60px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.lanyard-strap {
+  width: 24px;
+  height: 14px;
+  background: linear-gradient(180deg, #FF6B8B 0%, #FFD166 100%);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid #FFFFFF;
+}
+
+.lanyard-metal {
+  width: 32px;
+  height: 12px;
+  background: linear-gradient(90deg, #BAE6FD 0%, #FFFFFF 50%, #BAE6FD 100%);
+  border-radius: 6px;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 4px 8px rgba(14, 56, 84, 0.15);
+}
+
+/* Main Card Wrapper (Zero Dark/Black Backgrounds!) */
+.holo-card-surface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 25px 55px rgba(14, 56, 84, 0.18), 0 0 0 3.5px #BAE6FD;
+  transform: translateZ(0px);
+  background: #FFFDF9;
+}
+
+/* Canvas Display */
+#final-export-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* Dynamic Holographic Prismatic Foil Glare Overlay */
+.holo-foil-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 194, 209, 0.2) 25%,
+    rgba(255, 107, 139, 0.25) 45%,
+    rgba(255, 209, 102, 0.3) 55%,
+    rgba(0, 194, 209, 0.25) 75%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  mix-blend-mode: color-dodge;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Holographic Particle Shine Sparkle */
+.holo-sparkle-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  pointer-events: none;
+  background-image: radial-gradient(circle at var(--sparkle-x, 50%) var(--sparkle-y, 50%), rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+  z-index: 11;
+}
+
+/* Interactive Floating Shadow */
+.holo-floating-shadow {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(-70px);
+  width: 80%;
+  height: 22px;
+  background: radial-gradient(ellipse at center, rgba(14, 56, 84, 0.25) 0%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}

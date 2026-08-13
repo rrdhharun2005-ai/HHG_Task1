@@ -1,0 +1,264 @@
+/* ==========================================================================
+   HH GOA 2026 - CUTE CARTOON BEACH DESIGN SYSTEM
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Cute Cartoon Beach Color Palette */
+  --color-sky-blue: #6ED4F8;       /* Happy Sky Blue */
+  --color-sky-light: #BAE6FD;      /* Soft Pastel Sky */
+  --color-sky-soft: #E0F2FE;       /* Cotton Candy Sky */
+  --color-ocean-teal: #00C2D1;     /* Aqua Lagoon Teal */
+  --color-sunny-yellow: #FFD166;   /* Buttercup Sunshine Yellow */
+  --color-sun-warm: #FFE484;       /* Warm Sunlight */
+  --color-coral-pink: #FF6B8B;     /* Cute Strawberry Coral Pink */
+  --color-coral-hot: #FF5964;      /* Playful Coral Red */
+  --color-mint-green: #06D6A0;     /* Minty Palm Green */
+  --color-pastel-sand: #FFF5E1;    /* Creamy Beach Sand */
+  --color-dark-pop: #0E3854;       /* Rich Deep Blue for readable text */
+  --color-card-bg: rgba(255, 255, 255, 0.92);
+
+  /* Typography */
+  --font-cute: 'Fredoka', 'Outfit', sans-serif;
+  --font-display: 'Fredoka', 'Outfit', sans-serif;
+  --font-heading: 'Fredoka', 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Cute Chunky Radii & Borders */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+  --border-cute: 3px solid rgba(255, 255, 255, 0.8);
+  --border-chunky: 3px solid #0E3854;
+
+  /* Playful Bouncy Shadows */
+  --shadow-bubbly: 0 12px 28px rgba(14, 56, 84, 0.18), 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 8px 0 rgba(14, 56, 84, 0.25), 0 12px 20px rgba(0, 0, 0, 0.15);
+  --shadow-button-press: 0 2px 0 rgba(14, 56, 84, 0.25), 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-sky-blue);
+  color: var(--color-dark-pop);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Master Viewport */
+#app-viewport {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layers-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300vh;
+  transition: transform 0.95s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+
+/* Layer Structure */
+.world-layer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 85px 24px 32px;
+  scroll-behavior: smooth;
+}
+
+/* Custom Cute Scrollbar */
+.world-layer::-webkit-scrollbar,
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.world-layer::-webkit-scrollbar-track,
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+}
+
+.world-layer::-webkit-scrollbar-thumb,
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-coral-pink);
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+}
+
+.world-layer::-webkit-scrollbar-thumb:hover,
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sunny-yellow);
+}
+
+/* --------------------------------------------------------------------------
+   CUTE BOUNCY BUTTONS
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-cute);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: var(--radius-full);
+  border: 3px solid #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-decoration: none;
+  user-select: none;
+  position: relative;
+  box-shadow: var(--shadow-button);
+}
+
+/* Tactile Bouncy Squish on Press */
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.btn:active,
+button:active {
+  transform: translateY(4px) scale(0.95) !important;
+  box-shadow: var(--shadow-button-press) !important;
+  transition: transform 0.08s ease !important;
+}
+
+/* Cute Sky/Teal Button */
+.btn-primary {
+  background: linear-gradient(135deg, #00C2D1 0%, #0099b8 100%);
+  color: #FFFFFF;
+}
+
+/* Cute Strawberry Coral CTA */
+.btn-sunset {
+  background: linear-gradient(135deg, #FF6B8B 0%, #FF5964 100%);
+  color: #FFFFFF;
+}
+
+/* Cute Sunny Gold Button */
+.btn-sea {
+  background: linear-gradient(135deg, #FFD166 0%, #FFB703 100%);
+  color: #0E3854;
+  font-weight: 800;
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2.5px solid #FFFFFF;
+  color: var(--color-dark-pop);
+  box-shadow: 0 6px 16px rgba(14, 56, 84, 0.12);
+}
+
+.btn-glass:hover {
+  background: #FFFFFF;
+  color: var(--color-coral-pink);
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+/* Cute Bubbly Glass Cards */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 3.5px solid #FFFFFF;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-bubbly);
+  color: var(--color-dark-pop);
+}
+
+/* Badge Chips */
+.badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-family: var(--font-cute);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.badge-cyan {
+  background: #E0F7FA;
+  color: #00838F;
+}
+
+.badge-pink {
+  background: #FFE4E8;
+  color: #E11D48;
+}
+
+.badge-gold {
+  background: #FFF9DB;
+  color: #B45309;
+}
+
+.badge-green {
+  background: #E6FDF4;
+  color: #047857;
+}
+
+/* --------------------------------------------------------------------------
+   CUTE CLICK SPARKLES
+   -------------------------------------------------------------------------- */
+.click-spark {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000;
+  box-shadow: 0 0 10px currentColor;
+  animation: sparkBurst 0.65s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes sparkBurst {
+  0% {
+    transform: translate(0, 0) scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--spark-dx), var(--spark-dy)) scale(0);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .world-layer {
+    padding: 75px 16px 24px;
+  }
+}

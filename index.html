@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HH Goa 2026 — Cute Frame & Builder ID Card Generator</title>
+  <meta name="description" content="Official HH Goa 2026 Frame and Builder ID Generator. Upload your photo, customize your cute hacker badge or PFP frame with vibrant Goa beach vibes, and share on X with #FrameInGoa." />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HH Goa 2026 — Cute Frame & Builder ID Card Generator" />
+  <meta property="og:description" content="Generate your cute branded HH Goa 2026 Builder Pass and PFP Avatar Frame instantly with tropical beach aesthetics. No login required." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FF6B8B" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/navigation.css" />
+  <link rel="stylesheet" href="/src/styles/layer1-sky.css" />
+  <link rel="stylesheet" href="/src/styles/layer2-beach.css" />
+  <link rel="stylesheet" href="/src/styles/layer3-sea.css" />
+  <link rel="stylesheet" href="/src/styles/holo-card.css" />
+</head>
+<body>
+
+  <!-- ================================================================ -->
+  <!-- CUTE CARTOON AIRPLANE SCREEN TEAR INTRO (TEARS SCREEN IN HALF)   -->
+  <!-- ================================================================ -->
+  <div id="flight-intro-overlay" class="active-intro" aria-label="Cute Cartoon Airplane Opening">
+    
+    <!-- Screen Curtain Halves (Tears into Top and Bottom Halves) -->
+    <div class="tear-half tear-half-top"></div>
+    <div class="tear-half tear-half-bottom"></div>
+
+    <!-- Cute Sun Burst as Screen Tears -->
+    <div class="cute-sun-burst" id="sun-burst-reveal"></div>
+
+    <!-- Cute Intro Telemetry Box -->
+    <div class="cute-intro-hud" id="intro-telemetry-hud">
+      <div class="cute-hud-pill">
+        <span>✈️ FLIGHT HH-2026 • LANDING IN GOA! 🌴</span>
+      </div>
+      <h1 class="cute-hud-title">HACKER HOUSE GOA</h1>
+      <p style="font-family: var(--font-cute); font-size: 1.05rem; font-weight: 700; color: #1E4E70;">FEB 13-16, 2026 • CANDOLIM BEACH 🏖️</p>
+    </div>
+
+    <!-- Adorable Chubby Cartoon Airplane Flying Across Screen -->
+    <div class="cute-airplane-track" id="passenger-flight-track">
+      <!-- Puffy Cartoon Cloud Smoke Trail -->
+      <div class="smoke-puffs-group">
+        <div class="smoke-puff"></div>
+        <div class="smoke-puff"></div>
+        <div class="smoke-puff"></div>
+      </div>
+
+      <!-- Cute Chubby Cartoon Airplane SVG -->
+      <svg viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 280px; height: 180px; filter: drop-shadow(0 12px 20px rgba(14,56,84,0.25));">
+        <!-- Cute Chubby Fuselage Body -->
+        <path d="M20 90 C 20 45, 120 40, 210 55 C 255 65, 270 90, 260 105 C 245 125, 130 135, 20 90 Z" fill="#FFFFFF" stroke="#0E3854" stroke-width="4.5"/>
+        
+        <!-- Strawberry Pink Cute Nose Cap -->
+        <path d="M245 70 C 265 80, 265 100, 245 108 Z" fill="#FF6B8B" stroke="#0E3854" stroke-width="4"/>
+
+        <!-- Cute Big Smiling Pilot Window -->
+        <ellipse cx="205" cy="72" rx="22" ry="16" fill="#6ED4F8" stroke="#0E3854" stroke-width="3.5"/>
+        <ellipse cx="200" cy="68" rx="7" ry="5" fill="#FFFFFF"/>
+
+        <!-- Cute Rosy Cheek Blush -->
+        <circle cx="215" cy="94" r="8" fill="#FF8DA1" opacity="0.8"/>
+
+        <!-- Cute Passenger Windows -->
+        <circle cx="150" cy="85" r="10" fill="#FFD166" stroke="#0E3854" stroke-width="3"/>
+        <circle cx="115" cy="85" r="10" fill="#FFD166" stroke="#0E3854" stroke-width="3"/>
+        <circle cx="80" cy="85" r="10" fill="#FFD166" stroke="#0E3854" stroke-width="3"/>
+
+        <!-- Cute Chubby Top Wing (Butter Yellow) -->
+        <path d="M125 75 C 110 25, 145 15, 175 60 Z" fill="#FFD166" stroke="#0E3854" stroke-width="4"/>
+        <circle cx="140" cy="30" r="5" fill="#FF6B8B"/>
+
+        <!-- Cute Chubby Lower Wing (Butter Yellow) -->
+        <path d="M140 95 C 120 155, 155 165, 190 105 Z" fill="#FFD166" stroke="#0E3854" stroke-width="4"/>
+
+        <!-- Cute Tail Fin with Palm Tree Emblem -->
+        <path d="M35 80 C 15 35, 50 25, 75 75 Z" fill="#06D6A0" stroke="#0E3854" stroke-width="4"/>
+        <circle cx="45" cy="48" r="6" fill="#FFD166"/>
+
+        <!-- Cute Little Cartoon Propeller Spinning on Nose -->
+        <ellipse cx="265" cy="88" rx="4" ry="22" fill="#FFD166" stroke="#0E3854" stroke-width="3"/>
+        <circle cx="265" cy="88" r="5" fill="#0E3854"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- TOP HUD NAVIGATION (CUTE BUBBLY HEADER) -->
+  <header class="app-hud-header" id="app-header">
+    <div class="brand-logo-group" id="nav-brand-logo">
+      <div class="logo-badge-icon">🌴</div>
+      <div class="brand-title-wrap">
+        <span class="brand-title">HH GOA 2026</span>
+        <span class="brand-sub">Cute Pass Generator ✨</span>
+      </div>
+    </div>
+
+    <!-- Altitude Step Navigation Pill -->
+    <nav class="altitude-nav-pill" aria-label="Layer Altitude Navigation">
+      <button class="altitude-step active" data-layer="0" id="step-btn-sky">
+        <span class="step-icon">✈️</span>
+        <span class="step-label">1. Sky Level (10k FT)</span>
+      </button>
+      <div class="step-divider"></div>
+      <button class="altitude-step" data-layer="1" id="step-btn-beach">
+        <span class="step-icon">🏖️</span>
+        <span class="step-label">2. Beach Studio</span>
+      </button>
+      <div class="step-divider"></div>
+      <button class="altitude-step" data-layer="2" id="step-btn-sea">
+        <span class="step-icon">🌊</span>
+        <span class="step-label">3. Deep Sea Pass</span>
+      </button>
+    </nav>
+
+    <!-- Right Controls -->
+    <div class="hud-actions-right">
+      <button class="btn btn-glass" id="btn-replay-intro" title="Replay Cute Airplane Opening" style="padding: 6px 16px; font-size: 0.82rem;">
+        <span>✈️ Replay Fly</span>
+      </button>
+      <button class="sound-toggle-btn sound-on" id="btn-sound-toggle" title="Toggle Sound Effects" aria-label="Toggle Sound">
+        <i data-lucide="volume-2" id="sound-icon"></i>
+      </button>
+      <button class="btn btn-sunset" id="btn-header-cta" style="padding: 8px 18px; font-size: 0.88rem;">
+        <span>Create Pass ✨</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FLOATING VERTICAL LEVEL CANDY DOTS -->
+  <aside class="vertical-level-indicator" aria-hidden="true">
+    <button class="level-dot active" data-layer="0" title="Sky Level">
+      <span class="tooltip">☁️ 1. Sky (10,000 FT)</span>
+    </button>
+    <button class="level-dot" data-layer="1" title="Beach Studio">
+      <span class="tooltip">🏖️ 2. Beach Studio (0 FT)</span>
+    </button>
+    <button class="level-dot" data-layer="2" title="Deep Sea Abyss">
+      <span class="tooltip">🌊 3. Deep Sea (-50 FT)</span>
+    </button>
+  </aside>
+
+  <!-- MASTER VIEWPORT & 3-LAYER CONTAINER -->
+  <main id="app-viewport">
+    <div class="layers-container" id="layers-slider">
+
+      <!-- ================================================================ -->
+      <!-- LAYER 1: SKY & FLIGHT LEVEL (10,000 FT)                         -->
+      <!-- ================================================================ -->
+      <section class="world-layer" id="layer-sky" aria-label="Sky and Flight Welcome Screen">
+        
+        <!-- Cute Smiling Sun -->
+        <div class="cute-sky-sun">☀️</div>
+
+        <!-- Fluffy Floating Cartoon Clouds -->
+        <div class="cloud-drift-wrap">
+          <div class="cartoon-cloud cartoon-cloud-1"></div>
+          <div class="cartoon-cloud cartoon-cloud-2"></div>
+        </div>
+
+        <!-- Background Cruising Cute Airplane -->
+        <div class="flight-airspace" aria-hidden="true">
+          <div class="flying-plane-container">
+            <svg viewBox="0 0 120 80" fill="none" style="width: 100px; height: 65px;">
+              <path d="M10 40 C 10 20, 60 15, 95 25 C 115 30, 120 40, 115 48 C 105 58, 60 62, 10 40 Z" fill="#FFFFFF" stroke="#0E3854" stroke-width="3"/>
+              <path d="M105 32 C 118 36, 118 44, 105 48 Z" fill="#FF6B8B"/>
+              <circle cx="88" cy="34" r="8" fill="#6ED4F8" stroke="#0E3854" stroke-width="2"/>
+              <circle cx="60" cy="38" r="5" fill="#FFD166"/>
+              <circle cx="45" cy="38" r="5" fill="#FFD166"/>
+              <path d="M55 35 C 50 10, 65 5, 80 30 Z" fill="#FFD166" stroke="#0E3854" stroke-width="2.5"/>
+              <path d="M20 36 C 10 15, 25 10, 38 34 Z" fill="#06D6A0" stroke="#0E3854" stroke-width="2.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="sky-content-grid">
+          <div class="sky-hero-left">
+            <div class="flight-telemetry-badge">
+              <div class="pulsing-radar-dot"></div>
+              <span>FLIGHT HH-2026 // CLEARED TO LAND IN GOA 🌴</span>
+            </div>
+
+            <h1 class="sky-hero-title">
+              Craft Your Official
+              <span class="gradient-text">HH Goa 2026 Pass ✨</span>
+            </h1>
+
+            <p class="sky-hero-desc">
+              Welcome to the coastal builder gathering of 2026! Create your customized 
+              <strong>Builder ID Badge</strong> or <strong>PFP Avatar Frame</strong> in one click. 
+              Zero sign-up, instant HD render, ready to share on X with <code>#FrameInGoa</code>.
+            </p>
+
+            <div class="sky-feature-pills">
+              <div class="sky-pill">⚡ Instant Live Render</div>
+              <div class="sky-pill">📱 iPhone HEIC Support</div>
+              <div class="sky-pill">🛡️ No Login Wall</div>
+            </div>
+
+            <div class="sky-cta-group">
+              <button class="btn btn-boarding-flight" id="btn-descend-flight">
+                <span>🏖️ Land at Beach & Build Pass</span>
+                <i data-lucide="arrow-down" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="boarding-pass-card" id="hero-boarding-pass">
+            <div class="ticket-header">
+              <div class="ticket-flight-badge">WELCOME PASS • HH-2026 🎫</div>
+              <span class="badge-chip badge-pink">BUILDER PASS ⭐</span>
+            </div>
+
+            <div class="ticket-route">
+              <div class="airport-node">
+                <div class="airport-code">HCK</div>
+                <div class="airport-city">Builders 🌍</div>
+              </div>
+              <div class="flight-path-arrow">
+                <i data-lucide="plane" style="width: 24px; height: 24px; transform: rotate(90deg); color: #FF6B8B;"></i>
+                <div class="flight-dots"></div>
+                <span style="font-size: 0.72rem; font-family: var(--font-cute); font-weight: 700; color: #00838F;">DIRECT</span>
+              </div>
+              <div class="airport-node">
+                <div class="airport-code">GOA</div>
+                <div class="airport-city">Goa, IN 🏖️</div>
+              </div>
+            </div>
+
+            <div class="ticket-meta-grid">
+              <div class="meta-col">
+                <span class="meta-label">Event</span>
+                <span class="meta-val">HH Goa '26</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">Location</span>
+                <span class="meta-val">Goa, India 🌴</span>
+              </div>
+              <div class="meta-col">
+                <span class="meta-label">Access</span>
+                <span class="meta-val" style="color: #FF6B8B;">ALL BUILDERS 🚀</span>
+              </div>
+            </div>
+
+            <div class="ticket-barcode-wrap">
+              <svg class="barcode-svg" viewBox="0 0 200 40" fill="#0E3854">
+                <rect x="0" y="0" width="3" height="40"/><rect x="6" y="0" width="2" height="40"/><rect x="12" y="0" width="4" height="40"/><rect x="18" y="0" width="1" height="40"/><rect x="22" y="0" width="5" height="40"/><rect x="30" y="0" width="2" height="40"/><rect x="35" y="0" width="3" height="40"/><rect x="42" y="0" width="1" height="40"/><rect x="46" y="0" width="6" height="40"/><rect x="55" y="0" width="2" height="40"/><rect x="60" y="0" width="4" height="40"/><rect x="68" y="0" width="2" height="40"/><rect x="73" y="0" width="5" height="40"/><rect x="82" y="0" width="1" height="40"/><rect x="86" y="0" width="3" height="40"/><rect x="92" y="0" width="4" height="40"/><rect x="100" y="0" width="2" height="40"/><rect x="106" y="0" width="5" height="40"/><rect x="115" y="0" width="3" height="40"/><rect x="122" y="0" width="1" height="40"/><rect x="126" y="0" width="4" height="40"/><rect x="134" y="0" width="2" height="40"/><rect x="140" y="0" width="6" height="40"/><rect x="150" y="0" width="2" height="40"/><rect x="155" y="0" width="4" height="40"/><rect x="162" y="0" width="1" height="40"/><rect x="166" y="0" width="5" height="40"/><rect x="174" y="0" width="2" height="40"/><rect x="180" y="0" width="3" height="40"/><rect x="186" y="0" width="4" height="40"/><rect x="194" y="0" width="2" height="40"/>
+              </svg>
+              <span class="barcode-num">HH-GOA-2026-WELCOME-BUILDERS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sky-descent-footer">
+          <button class="descent-scroll-indicator" id="btn-scroll-indicator" aria-label="Scroll to Beach Studio">
+            <span>TOUCH DOWN ON BEACH 🏖️</span>
+            <i data-lucide="chevron-down" class="descent-arrow-icon"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================================================================ -->
+      <!-- LAYER 2: TOP-DOWN COASTAL BEACH STUDIO (DYNAMIC OCEAN TIDE)     -->
+      <!-- ================================================================ -->
+      <section class="world-layer" id="layer-beach" aria-label="Beachfront Studio Customization">
+        
+        <!-- Dynamic Top-Down Aerial Shoreline Backdrop -->
+        <div class="coastal-beach-backdrop">
+          
+          <!-- Large Golden Sand Expansive Beach -->
+          <div class="coastal-sand-bed"></div>
+
+          <!-- Dynamic Wet Sand Glaze where water washed -->
+          <div class="wet-sand-contour"></div>
+
+          <!-- Multi-Tier Dynamic Ocean Waves Lapping from Top-Right -->
+          <svg class="dynamic-tide-svg tide-layer-deep" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none">
+            <path d="M 650 0 C 850 180, 720 380, 980 540 C 1180 660, 1050 820, 1440 900 L 1440 0 Z" fill="url(#deepOceanGrad)"/>
+            <defs>
+              <linearGradient id="deepOceanGrad" x1="650" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#025068"/>
+                <stop offset="0.5" stop-color="#0A6C7E"/>
+                <stop offset="1" stop-color="#148F9C"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <svg class="dynamic-tide-svg tide-layer-aqua" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none">
+            <path d="M 620 0 C 820 190, 690 390, 950 560 C 1150 680, 1010 830, 1440 900 L 1440 0 Z" fill="url(#aquaOceanGrad)"/>
+            <defs>
+              <linearGradient id="aquaOceanGrad" x1="620" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0E9AA7"/>
+                <stop offset="0.4" stop-color="#1BB5A7"/>
+                <stop offset="0.85" stop-color="#40D1BE"/>
+                <stop offset="1" stop-color="#84E4D4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- Organic Surging White Wave Foam & Bubble Ribbons -->
+          <svg class="dynamic-tide-svg tide-layer-foam" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none">
+            <path d="M 590 0 C 790 200, 660 405, 920 575 C 1120 700, 980 845, 1440 900" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+            <path d="M 600 0 C 800 200, 670 405, 930 575 C 1130 700, 990 845, 1440 900" stroke="#E0F7FA" stroke-width="32" stroke-linecap="round" opacity="0.75"/>
+            <!-- Wave Bubble Rings -->
+            <circle cx="810" cy="220" r="8" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="830" cy="235" r="5" fill="#FFFFFF" opacity="0.7"/>
+            <circle cx="710" cy="415" r="10" fill="#FFFFFF" opacity="0.85"/>
+            <circle cx="735" cy="430" r="6" fill="#FFFFFF" opacity="0.75"/>
+            <circle cx="960" cy="590" r="12" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="990" cy="610" r="7" fill="#FFFFFF" opacity="0.65"/>
+          </svg>
+
+          <!-- Animated Coastal Shore Walker with Dog (Matching Reference Image) -->
+          <div class="beach-walker-scene" aria-hidden="true">
+            <div class="walker-figure" title="Hacker walking on beach">
+              <div class="walker-shadow"></div>
+              <div class="walker-body"></div>
+            </div>
+            <div class="walker-dog" title="Beach dog">
+              <div class="dog-shadow"></div>
+              <div class="dog-body"></div>
+            </div>
+          </div>
+
+          <!-- Floating Sea Foam Bubbles -->
+          <div class="tide-bubbles-wrap">
+            <div class="tide-bubble b1"></div>
+            <div class="tide-bubble b2"></div>
+            <div class="tide-bubble b3"></div>
+            <div class="tide-bubble b4"></div>
+          </div>
+
+        </div>
+
+        <!-- Studio Main Container -->
+        <div class="beach-studio-container">
+          
+          <div class="studio-header-bar">
+            <div class="studio-title-block">
+              <h2>🌴 Goa Beachfront Studio</h2>
+              <p>Customize your builder pass with instant live render 🏖️</p>
+            </div>
+
+            <!-- Format Mode Switcher Tabs -->
+            <div class="format-switch-tabs" role="tablist">
+              <button class="format-tab-btn active" data-mode="id" id="tab-mode-id" role="tab" aria-selected="true">
+                <i data-lucide="id-card" style="width: 18px; height: 18px;"></i>
+                <span>🪪 Builder ID Card</span>
+              </button>
+              <button class="format-tab-btn" data-mode="pfp" id="tab-mode-pfp" role="tab" aria-selected="false">
+                <i data-lucide="user-check" style="width: 18px; height: 18px;"></i>
+                <span>🖼️ PFP Avatar Frame</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Studio 2-Column Grid -->
+          <div class="studio-workspace-grid">
+            
+            <!-- Left: Controls & Comprehensive Form Panel -->
+            <div class="studio-controls-card glass-panel custom-scroll">
+              
+              <!-- 1. Photo Upload & Adjustments -->
+              <div class="form-section-box">
+                <div class="section-label">
+                  <i data-lucide="camera" style="width: 18px; height: 18px; color: #FF6B8B;"></i>
+                  <span>1. Photo & Canvas Filters (JPG, PNG, HEIC)</span>
+                </div>
+
+                <div class="photo-uploader-dropzone" id="photo-dropzone">
+                  <input type="file" id="file-input" accept="image/*,.heic,.heif" style="display: none;" />
+                  <div class="upload-inner">
+                    <div class="upload-icon-circle">
+                      <i data-lucide="upload-cloud" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="upload-text-group">
+                      <div class="upload-text-title">Click to upload or drop your photo here 📸</div>
+                      <div class="upload-text-hint">Handles portraits, landscapes & iPhone HEIC seamlessly</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Photo Adjustment Controls -->
+                <div class="photo-adjust-bar">
+                  <div class="zoom-slider-wrap">
+                    <i data-lucide="zoom-in" style="width: 16px; height: 16px;"></i>
+                    <input type="range" id="zoom-slider" min="0.5" max="2.5" step="0.05" value="1.0" title="Adjust Zoom" />
+                  </div>
+                  <button class="btn btn-glass btn-icon" id="btn-rotate-photo" title="Rotate 90°">
+                    <i data-lucide="rotate-cw" style="width: 16px; height: 16px;"></i>
+                  </button>
+                  <button class="btn btn-glass btn-icon" id="btn-reset-photo" title="Reset Position">
+                    <i data-lucide="refresh-ccw" style="width: 16px; height: 16px;"></i>
+                  </button>
+                </div>
+
+                <!-- Filter Presets -->
+                <div class="filter-presets-row" id="filter-presets">
+                  <button class="filter-chip-btn active" data-filter="original">Original ✨</button>
+                  <button class="filter-chip-btn" data-filter="sunset">🌅 Sunset Glow</button>
+                  <button class="filter-chip-btn" data-filter="cyber">⚡ Cyber Goa</button>
+                  <button class="filter-chip-btn" data-filter="matrix">🍃 Matrix</button>
+                  <button class="filter-chip-btn" data-filter="vintage">📷 Vintage</button>
+                  <button class="filter-chip-btn" data-filter="gold">👑 Gold VIP</button>
+                </div>
+              </div>
+
+              <!-- 2. Builder Profile & Socials -->
+              <div class="form-section-box">
+                <div class="section-label">
+                  <i data-lucide="user-check" style="width: 18px; height: 18px; color: #00C2D1;"></i>
+                  <span>2. Builder Profile & Handles</span>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="input-field-wrap">
+                    <label class="input-field-label" for="input-name">👤 Full Name *</label>
+                    <input type="text" id="input-name" class="cyber-input" placeholder="e.g. Alex Rivera" value="Alex Rivera" maxlength="28" />
+                    <span class="input-field-hint">Your name as shown on the pass</span>
+                  </div>
+
+                  <div class="input-field-wrap">
+                    <label class="input-field-label" for="select-role">💼 Builder Role / Discipline *</label>
+                    <select id="select-role" class="cyber-input cyber-select">
+                      <option value="Fullstack Hacker">Fullstack Hacker 💻</option>
+                      <option value="AI / LLM Architect">AI / LLM Architect 🤖</option>
+                      <option value="Smart Contract Wizard">Smart Contract Wizard ⛓️</option>
+                      <option value="UI/UX Craftsperson">UI/UX Craftsperson 🎨</option>
+                      <option value="Founder / Visionary">Founder / Visionary 🚀</option>
+                      <option value="Zero-Knowledge Dev">Zero-Knowledge Dev 🛡️</option>
+                      <option value="Systems & Kernel Hacker">Systems & Kernel Hacker ⚡</option>
+                      <option value="custom">✏️ Enter Custom Role...</option>
+                    </select>
+                    <span class="input-field-hint">Select what discipline fits you best</span>
+                  </div>
+                </div>
+
+                <!-- Custom Role Input -->
+                <div class="input-field-wrap" id="custom-role-wrap" style="display: none;">
+                  <label class="input-field-label" for="input-custom-role">✏️ Enter Your Custom Role Title</label>
+                  <input type="text" id="input-custom-role" class="cyber-input" placeholder="e.g. GPU Kernel Whisperer" maxlength="30" />
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="input-field-wrap">
+                    <label class="input-field-label" for="input-handle">🐦 X (Twitter) Handle *</label>
+                    <input type="text" id="input-handle" class="cyber-input" placeholder="e.g. @arivera_dev" value="@arivera_dev" maxlength="24" />
+                    <span class="input-field-hint">Used for 1-click #FrameInGoa share</span>
+                  </div>
+
+                  <div class="input-field-wrap">
+                    <label class="input-field-label" for="input-github">💻 GitHub Username</label>
+                    <input type="text" id="input-github" class="cyber-input" placeholder="e.g. arivera-code" value="arivera-code" maxlength="24" />
+                    <span class="input-field-hint">Your GitHub profile username</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Hackathon Project & Fun Builder Attributes -->
+              <div class="form-section-box">
+                <div class="section-label">
+                  <i data-lucide="sparkles" style="width: 18px; height: 18px; color: #FFD166;"></i>
+                  <span>3. Project, Superpower & Beach Vibe</span>
+                </div>
+
+                <div class="input-field-wrap">
+                  <label class="input-field-label" for="input-project">🚀 Hackathon Project / Team Name</label>
+                  <input type="text" id="input-project" class="cyber-input" placeholder="e.g. Solana Beach Copilot" value="Solana Beach Copilot" maxlength="34" />
+                  <span class="input-field-hint">What are you building at HH Goa 2026?</span>
+                </div>
+
+                <div class="input-field-wrap">
+                  <label class="input-field-label" for="input-builder-title">
+                    <span>⚡ Special Builder Specialization</span>
+                  </label>
+                  <div class="input-with-action-row">
+                    <input type="text" id="input-builder-title" class="cyber-input" value="10x Caffeine Synthesizer" maxlength="45" />
+                    <button class="btn-roll-mini" id="btn-random-title" title="Roll a random fun title">
+                      <i data-lucide="dice-5" style="width: 14px; height: 14px;"></i>
+                      <span>Roll Title 🎲</span>
+                    </button>
+                  </div>
+                  <span class="input-field-hint">Click Roll Title 🎲 for fun builder specializations!</span>
+                </div>
+
+                <div class="form-grid-2col">
+                  <div class="input-field-wrap">
+                    <label class="input-field-label" for="input-superpower">
+                      <span>⭐ Coding Superpower</span>
+                    </label>
+                    <div class="input-with-action-row">
+                      <input type="text" id="input-superpower" class="cyber-input" value="Level 99 Async Wizard" maxlength="32" />
+                      <button class="btn-roll-mini" id="btn-random-power" title="Roll superpower">
+                        <i data-lucide="zap" style="width: 14px; height: 14px;"></i>
+                      </button>
+                    </div>
+                    <span class="input-field-hint">Your secret hacker strength</span>
+                  </div>
+
+                  <div class="input-field-wrap">
+                    <label class="input-field-label" for="input-coffee">
+                      <span>🥥 Beach Fuel & Routine</span>
+                    </label>
+                    <div class="input-with-action-row">
+                      <input type="text" id="input-coffee" class="cyber-input" value="Cold Brew & Surf" maxlength="32" />
+                      <button class="btn-roll-mini" id="btn-random-coffee" title="Roll vibe">
+                        <i data-lucide="coffee" style="width: 14px; height: 14px;"></i>
+                      </button>
+                    </div>
+                    <span class="input-field-hint">Your favorite drink or beach fuel</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Theme & Tech Stack -->
+              <div class="form-section-box">
+                <div class="section-label">
+                  <i data-lucide="palette" style="width: 18px; height: 18px; color: #06D6A0;"></i>
+                  <span>4. Cute Artwork Theme & Verified Skills</span>
+                </div>
+
+                <!-- Theme Palette Cards -->
+                <div class="input-field-wrap">
+                  <label class="input-field-label">Choose Your Card Theme Palette</label>
+                  <div class="theme-selector-grid" id="theme-selector-grid">
+                    <button class="theme-card-option active" data-theme="sunset" title="Strawberry Coral Pop">
+                      <div class="theme-swatch" style="background: linear-gradient(135deg, #FF6B8B, #FFD166, #6ED4F8);"></div>
+                      <span class="theme-name">Strawberry 🍓</span>
+                    </button>
+                    <button class="theme-card-option" data-theme="miami" title="Aqua Lagoon">
+                      <div class="theme-swatch" style="background: linear-gradient(135deg, #00C2D1, #6ED4F8, #FFD166);"></div>
+                      <span class="theme-name">Aqua Lagoon 🌊</span>
+                    </button>
+                    <button class="theme-card-option" data-theme="gold" title="Sunny Honey">
+                      <div class="theme-swatch" style="background: linear-gradient(135deg, #FFD166, #FFB703, #FF6B8B);"></div>
+                      <span class="theme-name">Sunny Honey ☀️</span>
+                    </button>
+                    <button class="theme-card-option" data-theme="emerald" title="Minty Coconut">
+                      <div class="theme-swatch" style="background: linear-gradient(135deg, #06D6A0, #00C2D1, #FFF3D6);"></div>
+                      <span class="theme-name">Mint Coconut 🥥</span>
+                    </button>
+                    <button class="theme-card-option" data-theme="ocean" title="Cotton Candy">
+                      <div class="theme-swatch" style="background: linear-gradient(135deg, #FF8DA1, #BAE6FD, #FFD166);"></div>
+                      <span class="theme-name">Cotton Candy 🌸</span>
+                    </button>
+                    <button class="theme-card-option" data-theme="cyberpunk" title="Rainbow Beach">
+                      <div class="theme-swatch" style="background: linear-gradient(135deg, #FF6B8B, #00C2D1, #06D6A0);"></div>
+                      <span class="theme-name">Rainbow Beach 🌈</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tech Stack Tags -->
+                <div class="input-field-wrap" id="stack-tags-section">
+                  <label class="input-field-label">Verified Tech Skills (Click to toggle or add custom below)</label>
+                  <div class="tech-chips-picker" id="tech-chips-picker">
+                    <button class="tech-chip-tag selected" data-tag="TypeScript">TypeScript</button>
+                    <button class="tech-chip-tag selected" data-tag="Rust">Rust</button>
+                    <button class="tech-chip-tag selected" data-tag="Next.js">Next.js</button>
+                    <button class="tech-chip-tag selected" data-tag="Solana">Solana</button>
+                    <button class="tech-chip-tag" data-tag="Python">Python</button>
+                    <button class="tech-chip-tag" data-tag="PyTorch">PyTorch</button>
+                    <button class="tech-chip-tag" data-tag="Go">Go</button>
+                    <button class="tech-chip-tag" data-tag="Solidity">Solidity</button>
+                    <button class="tech-chip-tag" data-tag="Docker">Docker</button>
+                    <button class="tech-chip-tag" data-tag="Tailwind">Tailwind</button>
+                  </div>
+
+                  <div class="custom-tag-add-row">
+                    <input type="text" id="input-custom-tag" class="cyber-input" placeholder="Type custom skill (e.g. Flutter, GraphQL) ✨" maxlength="18" />
+                    <button class="btn-add-tag" id="btn-add-tag">Add Skill</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Live Canvas Preview -->
+            <div class="studio-preview-card glass-panel">
+              <div class="preview-header-meta">
+                <div class="live-render-badge">
+                  <div class="live-dot"></div>
+                  <span>LIVE PREVIEW ⚡</span>
+                </div>
+                <span class="badge-chip badge-pink" id="preview-mode-tag">BUILDER ID</span>
+              </div>
+
+              <!-- Interactive Canvas Preview Box -->
+              <div class="canvas-preview-box" id="canvas-preview-wrap">
+                <canvas id="preview-canvas"></canvas>
+                <div class="canvas-drag-hint">
+                  <i data-lucide="move" style="width: 12px; height: 12px;"></i>
+                  <span>Drag photo to frame perfectly</span>
+                </div>
+              </div>
+
+              <!-- Dive CTA to transition to Layer 3 -->
+              <button class="btn btn-sunset dive-to-sea-cta" id="btn-dive-sea">
+                <span>🌊 Dive Under & Reveal Final Pass ✨</span>
+                <i data-lucide="arrow-down-circle" style="width: 20px; height: 20px;"></i>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================================================================ -->
+      <!-- LAYER 3: DEEP SEA CYBER ABYSS (-50 FT UNDERWATER)               -->
+      <!-- ================================================================ -->
+      <section class="world-layer" id="layer-sea" aria-label="Deep Sea Holographic Pass Showcase">
+        <div class="underwater-caustics"></div>
+        <div class="underwater-bubbles-wrap" id="bubbles-container"></div>
+
+        <div class="sea-showcase-container">
+          <div class="showcase-header">
+            <div class="mint-status-pill">
+              <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+              <span>GENERATED & READY TO SHARE ⭐</span>
+            </div>
+            <h2 class="showcase-title">Your Official HH Goa 2026 Pass</h2>
+            <p class="showcase-desc">Move your cursor over the card below to see the 3D holographic tilt & iridescent reflection sheen! Download in HD or share directly to X with #FrameInGoa.</p>
+          </div>
+
+          <div class="holo-card-scene" id="holo-card-scene">
+            <div class="holo-card-stage" id="holo-card-stage">
+              <div class="holo-lanyard-clip" id="holo-lanyard">
+                <div class="lanyard-strap"></div>
+                <div class="lanyard-metal"></div>
+              </div>
+
+              <div class="holo-card-surface">
+                <canvas id="final-export-canvas"></canvas>
+                <div class="holo-foil-glare" id="holo-foil-glare"></div>
+                <div class="holo-sparkle-mesh"></div>
+              </div>
+
+              <div class="holo-floating-shadow"></div>
+            </div>
+          </div>
+
+          <div class="sea-actions-card glass-panel">
+            <div class="main-action-buttons-row">
+              <button class="btn btn-download-hd" id="btn-download-pass">
+                <i data-lucide="download" style="width: 18px; height: 18px;"></i>
+                <span>Download HD Pass 📥</span>
+              </button>
+
+              <button class="btn btn-share-x" id="btn-share-pass-x">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>Share to X 🚀</span>
+              </button>
+
+              <button class="btn btn-copy-clip" id="btn-copy-clipboard">
+                <i data-lucide="copy" style="width: 18px; height: 18px;"></i>
+                <span>Copy Image 📋</span>
+              </button>
+            </div>
+
+            <div class="secondary-actions-row">
+              <button class="btn-back-beach" id="btn-reedit-pass">
+                <i data-lucide="arrow-up" style="width: 16px; height: 16px;"></i>
+                <span>Edit in Beachfront Studio 🏖️</span>
+              </button>
+
+              <button class="btn-back-sky" id="btn-return-sky">
+                <i data-lucide="plane" style="width: 16px; height: 16px;"></i>
+                <span>Return to Sky ☁️</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Script Entry -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
